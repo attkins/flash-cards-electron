@@ -1,0 +1,71 @@
+$color-success: rgb(35, 187, 35);
+$color-error: rgb(201, 33, 33);
+
+.card-box {
+    width: 100%;
+}
+
+.cards {}
+
+.cards-actions {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cards-action {
+        position: relative;
+        margin-right: 10px;
+        user-select: none;
+
+        &--yes:hover svg {
+            fill: $color-success;
+        }
+
+        &--no:hover svg {
+            fill: $color-error;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -3px;
+            border-radius: 100%;
+            background-color:$color-success;
+            color: #fff;
+            padding: 3px 5px;
+            font-size: 10px;
+        }
+
+        &--no .badge {
+            background-color: $color-error;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+
+    svg {
+        fill: #333;
+        height: 32px;
+        width: 32px;
+    }
+
+    span {
+        display: none;
+    }
+}
